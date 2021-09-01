@@ -1,6 +1,6 @@
 {
-  "name": "angular2-cookie",
-  "version": "1.2.7",
+  "name": "@martinarias/angular2-cookie",
+  "version": "1.2.8",
   "description": "Implementation of Angular 1.x $cookies service to Angular 2",
   "repository": {
     "type": "git",
@@ -17,7 +17,7 @@
     "ng2-cookies",
     "ng2-cookie"
   ],
-  "author": "Martin Arias<npm@borderless-software.com",
+  "author": "Martin Arias",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/martinarias/angular2-cookie/issues"
@@ -26,8 +26,7 @@
   "engines": {
     "node": ">=5.0.0"
   },
-  "scripts": {
-  },
+  "scripts": {},
   "main": "core.js",
   "peerDependencies": {
     "@angular/common": "^2.0.0",
@@ -90,5 +89,8 @@
     "tslint": "3.15.1",
     "typescript": "2.0.3",
     "zone.js": "^0.7.2"
+  },
+  "directories": {
+    "test": "test"
   }
 }

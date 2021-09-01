@@ -8,12 +8,14 @@ export class CookieOptions {
   domain: string;
   expires: string|Date;
   secure: boolean;
+  samesite: string;
 
-  constructor({path, domain, expires, secure}: CookieOptionsArgs = {}) {
+  constructor({path, domain, expires, secure, samesite}: CookieOptionsArgs = {}) {
     this.path = this.isPresent(path) ? path : null;
     this.domain = this.isPresent(domain) ? domain : null;
     this.expires = this.isPresent(expires) ? expires : null;
     this.secure = this.isPresent(secure) ? secure : false;
+    this.samesite = this.isPresent(samesite) ? samesite : 'Lax';
   }
 
   merge(options?: CookieOptionsArgs): CookieOptions {
@@ -25,6 +27,8 @@ export class CookieOptions {
                                                                             this.expires,
       secure: this.isPresent(options) && this.isPresent(options.secure) ? options.secure :
                                                                           this.secure,
+      samesite: this.isPresent(options) && this.isPresent(options.samesite) ? options.samesite :
+      this.samesite,
     });
   }
 
