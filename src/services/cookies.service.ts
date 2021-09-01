@@ -171,6 +171,7 @@ export class CookieService implements ICookieService {
     str += opts.path ? ';path=' + opts.path : '';
     str += opts.domain ? ';domain=' + opts.domain : '';
     str += expires ? ';expires=' + expires.toUTCString() : '';
+    str += opts.samesite ? ';samesite' : '';
     str += opts.secure ? ';secure' : '';
 
     // per http://www.ietf.org/rfc/rfc2109.txt browser must allow at minimum:
